@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Page</title>
+    <!-- Css File Header -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar start-->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/assets/logo.svg" alt="Marmeto Shopping" />
+      </div>
+      <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Shop</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-features">
+        <a href="#"><img src="/assets/search.svg" alt="search" /></a>
+        <a href="#"><img src="/assets/heart.svg" alt="Favorites" /></a>
+        <a href="#"><img src="/assets/cart.svg" alt="cart" /></a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="menu-mobile" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Shop</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Navbar End -->
+    <!-- Main Container Start-->
+    <main class="main-container">
+      <!-- Banner Section Start -->
+      <div class="banner-box">
+        <img src="/assets/logo-1.svg" alt="" />
+        <h1>Cart</h1>
+        <p><a href="#">Home</a> > Cart</p>
+      </div>
+      <!-- Banner Section End -->
+      <div class="inner-content">
+        <div class="loader" id="loader">
+          <img src="/assets/loader.gif" alt="Loading..." />
+        </div>
+        <!-- Product Table Start -->
+        <table class="cart-table" border="0">
+          <thead>
+            <tr>
+              <th colspan="2">Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th colspan="2">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <!-- Dynamic Rows Will Be Injected Here -->
+          </tbody>
+        </table>
+        <!-- Product Table End -->
+        <!-- Checkout Section Start -->
+        <div class="checkout-section">
+          <p style="font-size: 1.4rem">Cart Total</p>
+          <p>Sub Total: <span id="stotal-amt">₹0</span></p>
+          <p>Total: <span id="total">₹0</span></p>
+          <button id="chkout-btn">Check Out</button>
+        </div>
+        <!-- Checkout Section End -->
+      </div>
+      <!-- Hero section  Start-->
+      <!--Hero Section End  -->
+      <!-- Main Container End -->
+    </main>
+    <!-- Modal Popup for Item Removal Confirmation -->
+    <div id="removeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to remove this item from the cart?</p>
+        <div class="modal-buttons">
+          <button id="confirm-remove">Yes</button>
+          <button id="cancel-remove">No</button>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="fcard">
+        <img src="/assets/reward.svg" alt="" />
+        <div>
+          <p class="feature-heading">High Quality</p>
+          <p class="feature-desc">crafted from top materials</p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img src="/assets/check.svg" alt="" />
+        <div>
+          <p class="feature-heading">Warranty Protection</p>
+          <p class="feature-desc">Over 2 years</p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img src="/assets/shipping.svg" alt="" />
+        <div>
+          <p class="feature-heading">Free Shipping</p>
+          <p class="feature-desc">Order over 150 $</p>
+        </div>
+      </div>
+      <div class="fcard">
+        <img src="/assets/customer-support.svg" alt="" />
+        <div>
+          <p class="feature-heading">24 / 7 Support</p>
+          <p class="feature-desc">Dedicated support</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+  <!-- Script File  -->
+  <script src="script.js"></script>
+</html>
